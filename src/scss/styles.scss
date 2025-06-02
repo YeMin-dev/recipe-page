@@ -1,0 +1,135 @@
+@use "variables" as *;
+@use "resets" as *;
+
+body {
+  background-color: $bg-color;
+  font-family: $body-font;
+  color: $main-font-color;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.header {
+  #{&}__img {
+    width: 100%;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  #{&}__title {
+    font-family: $title-font;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+    margin: 1rem 0;
+  }
+
+  #{&}__description {
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+}
+
+.prep {
+  background-color: $prep-bg-color;
+  margin: 2rem 0;
+  border-radius: 1rem;
+  padding: 2rem;
+
+  #{&}__title {
+    color: $prep-title-color;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  #{&}__list {
+    line-height: 2;
+    list-style-position: inside;
+    font-size: 1.2rem;
+
+    &-item {
+      span {
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.section {
+  border-bottom: 1px solid $main-font-color;
+  margin-bottom: 2rem;
+
+  #{&}__title {
+    font-family: $title-font;
+    color: $section-title-color;
+    font-weight: 400;
+    font-size: 2rem;
+  }
+
+  #{&}__list {
+    line-height: 2;
+    list-style-position: outside;
+    padding-left: 1.3rem;
+    margin: 1rem 0 2rem 0;
+    font-size: 1.2rem;
+
+    &-item {
+      padding-left: 1.5rem;
+
+      &::marker {
+        color: $section-title-color;
+        font-weight: 600;
+      }
+      span {
+        font-weight: 600;
+      }
+    }
+  }
+
+  #{&}__text {
+    line-height: 2;
+    font-size: 1.2rem;
+    margin: 1rem 0;
+  }
+
+  #{&}__table {
+    font-size: 1.2rem;
+    line-height: 3;
+    width: 100%;
+    border-collapse: collapse;
+
+    tr td:first-child {
+      padding-left: 3rem;
+      width: 50%;
+    }
+
+    tr td:last-child {
+      color: $section-title-color;
+      font-weight: 600;
+    }
+
+    tr:not(:last-child) td {
+      border-bottom: 1px solid $main-font-color;
+    }
+  }
+
+  &--border-0 {
+    border-bottom: 0px;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
